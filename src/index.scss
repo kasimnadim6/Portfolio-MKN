@@ -1,0 +1,21 @@
+@import './abstracts/typography';
+@import './abstracts/mixin';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  --primary-color: #00a6ff;
+  --white: #ffff;
+  --black: #0000;
+}
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  // font-family: GT Walsheim, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+}

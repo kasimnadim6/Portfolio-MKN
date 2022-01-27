@@ -1,0 +1,36 @@
+@import '../../abstracts/mixin';
+.about-section {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Encode Sans', sans-serif;
+  .what-is-my-name {
+    color: #8892af;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .intro {
+    margin-top: 1rem;
+    .name,
+    .work-info {
+      font-size: 5.5rem;
+      font-weight: bold;
+    }
+    .name {
+      // color: #8892af;
+    }
+    .work-info {
+      @include text-background-clip(to right top, #aa076b, #61045f);
+    }
+    .web {
+      @include text-background-clip(to right top, #1488cc, #2b32b2);
+    }
+  }
+  .tagline {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    width: 75%;
+    letter-spacing: 1px;
+    color: #8892af;
+    @include text-background-clip(to right top, #159957, #155799);
+  }
+}
