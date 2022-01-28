@@ -13,7 +13,12 @@
     padding: 5rem 2rem;
   }
 }
-
+.social-icons,
+.email {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
 .email {
   position: fixed;
   bottom: 0;
