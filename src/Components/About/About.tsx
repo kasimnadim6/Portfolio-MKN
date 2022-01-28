@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './About.module.scss';
 
 const About = () => {
@@ -15,6 +14,9 @@ const About = () => {
         I’m a software engineer specializing in building (and occasionally
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible, human-centered products at Upstatement.
+      </div>
+      <div className={styles['contact-me']}>
+        <button className={styles.btn}>Contact Me</button>
       </div>
     </section>
   );

@@ -1,17 +1,16 @@
-@import '../../abstracts/mixin';
 @import '../../index.scss';
 .nav {
-  background-color: #0b192e;
-  min-height: 8vh;
+  background-color: $bg-color;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  border-bottom: 1px solid rgba(#f2f2f2, 0.1);
-  box-shadow: 1px 1px 1px rgba(#000, 0.2);
+  border-bottom: 1px solid rgba($white-light, 0.1);
+  box-shadow: 1px 1px 1px rgba($black, 0.2);
   .logo {
-    font-size: 1.6rem;
-    color: #64ffda;
+    font-size: 2.5rem;
+    color: $primary-color;
     font-family: 'Pacifico', cursive;
   }
   .nav-links {
@@ -25,7 +24,7 @@
       list-style: none;
       a {
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 1.6rem;
         font-weight: 400;
         padding: 0.5rem 1rem;
         color: #ccd6f6;
@@ -33,7 +32,7 @@
         transition: all 0.2s;
         position: relative;
         &:hover {
-          color: #64ffda;
+          color: $primary-color;
           // background-color: rgba(#3f3e3e, 0.3);
           // border-radius: 5px;
           // @include text-background-clip(to right top, #c21500, #ffc500);
@@ -51,9 +50,9 @@
     @include media-breakpoint-down(sm) {
       position: absolute;
       right: 0;
-      height: 92vh;
-      top: 8vh;
-      background-color: #0b192e;
+      height: 90vh;
+      top: 10vh;
+      background-color: $bg-color;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
@@ -71,7 +70,7 @@
       width: 2rem;
       height: 1px;
       margin: 8px;
-      background-color: #fff;
+      background-color: $white;
     }
     @include media-breakpoint-down(sm) {
       display: block;

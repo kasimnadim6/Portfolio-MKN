@@ -5,9 +5,12 @@ import styles from './Home.module.scss';
 const Home = () => {
   return (
     <>
-      <header className={styles.header}>
-        <Header />
-      </header>
+      {/* <header className={styles.header}> */}
+      <Header />
+      {/* </header> */}
+      <main className={styles.main}>
+        <About />
+      </main>
     </>
   );
 };
