@@ -2,12 +2,12 @@
 .about-section {
   display: flex;
   flex-direction: column;
-  font-family: 'Encode Sans', sans-serif;
   .what-is-my-name {
     color: $primary-color;
     font-size: $md-font-size;
     font-weight: 300;
     letter-spacing: 2px;
+    font-family: 'Eczar', serif;
   }
   .intro {
     margin-top: 1.5rem;
@@ -15,6 +15,7 @@
     .work-info {
       letter-spacing: 1px;
       font-size: $lg-font-size;
+      font-family: 'Eczar', serif;
       font-weight: bold;
     }
     .name {
