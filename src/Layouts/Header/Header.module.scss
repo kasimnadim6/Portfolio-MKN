@@ -9,7 +9,7 @@
   border-bottom: 1px solid rgba($white-light, 0.1);
   box-shadow: 1px 1px 1px rgba($black, 0.2);
   .logo {
-    font-size: 2.5rem;
+    font-size: $logo-size;
     color: $primary-color;
     font-family: 'Pacifico', cursive;
   }
@@ -24,7 +24,7 @@
       list-style: none;
       a {
         text-decoration: none;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         font-weight: 400;
         padding: 0.5rem 1rem;
         color: #ccd6f6;
