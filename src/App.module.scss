@@ -1,0 +1,15 @@
+@import './index.scss';
+.main {
+  background-color: $bg-color;
+  padding: 10rem 18rem;
+  height: 90vh;
+  @include media-breakpoint-down(lg) {
+    padding: 10rem 10rem;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 10rem 10rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 5rem 2rem;
+  }
+}

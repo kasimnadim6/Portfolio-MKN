@@ -1,0 +1,99 @@
+@import '../../index.scss';
+.social-icons {
+  position: fixed;
+  bottom: 0;
+  left: 2rem;
+  right: auto;
+  width: 4rem;
+  z-index: 10;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding: 5px;
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        color: inherit;
+        position: relative;
+        transition: var(--transition);
+        font-size: 28px;
+        color: $grey-dark;
+        transition: transform 0.3s;
+        &:hover {
+          transform: translateY(-0.3rem);
+        }
+      }
+      .linkedin:hover {
+        color: $linkedin-color;
+      }
+      .whatsapp:hover {
+        color: $whatsapp-color;
+      }
+      .github:hover {
+        color: $github-color;
+      }
+      .instagram:hover {
+        color: $instagram-color;
+      }
+    }
+    &:after {
+      display: block;
+      content: '';
+      width: 1px;
+      height: 9rem;
+      margin: 0px auto;
+      background-color: $grey-dark;
+    }
+  }
+}
+.social-icons,
+.email {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+.email {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 2rem;
+  z-index: 10;
+  color: $white;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  a {
+    margin: 2rem auto;
+    padding: 1rem;
+    font-size: $md-font-size;
+    color: $grey-dark;
+    line-height: 1.6rem;
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    list-style: none;
+    transition: transform 0.3s;
+    &:hover {
+      color: $primary-color;
+      transform: translateY(-0.3rem);
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 9rem;
+    margin: 0px auto;
+    background-color: $grey-dark;
+  }
+}

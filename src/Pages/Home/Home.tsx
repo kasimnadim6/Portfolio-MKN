@@ -1,49 +1,24 @@
-import About from '../../Components/About/About';
-import Header from '../../Layouts/Header/Header';
 import styles from './Home.module.scss';
-import {
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from 'phosphor-react';
+
 const Home = () => {
   return (
-    <>
-      {/* <header className={styles.header}> */}
-      <Header />
-      {/* </header> */}
-      <div className={styles['social-icons']}>
-        <ul>
-          <li>
-            <a href="linkedin.com" className={styles.linkedin}>
-              <LinkedinLogo weight="fill" />
-            </a>
-          </li>
-          <li>
-            <a href="whatsapp.com" className={styles.whatsapp}>
-              <WhatsappLogo weight="fill" />
-            </a>
-          </li>
-          <li>
-            <a href="github.com" className={styles.github}>
-              <GithubLogo weight="fill" />
-            </a>
-          </li>
-          <li>
-            <a href="instagram.in" className={styles.instagram}>
-              <InstagramLogo weight="fill" />
-            </a>
-          </li>
-        </ul>
+    <section className={styles['about-section']}>
+      <span className={styles['what-is-my-name']}>Hi, My name is</span>
+      <div className={styles.intro}>
+        <h1 className={styles.name}>M. Kasim Nadim.</h1>
+        <h2 className={`${styles['work-info']} text-background-clip`}>
+          I build things for the <span className={styles.web}>Web.</span>
+        </h2>
       </div>
-      <div className={styles.email}>
-        <a href="#">kasimnadim6@gmail.com</a>
+      <div className={`${styles.tagline}`}>
+        I’m a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences. Currently, I’m focused on
+        building accessible, human-centered products at Upstatement.
       </div>
-      <main className={styles.main}>
-        <About />
-      </main>
-    </>
+      <div className={styles['contact-me']}>
+        <button className={styles.btn}>Contact Me</button>
+      </div>
+    </section>
   );
 };
 
