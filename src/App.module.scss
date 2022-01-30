@@ -2,7 +2,9 @@
 .main {
   background-color: $bg-color;
   padding: 10rem 18rem;
-  height: 90vh;
+  margin-top: 7vh;
+  // margin-top: calc(100vh - 93vh);
+  height: 93vh;
   @include media-breakpoint-down(lg) {
     padding: 10rem 10rem;
   }
