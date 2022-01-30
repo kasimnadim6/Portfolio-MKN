@@ -6,36 +6,40 @@ const Header = () => {
   let direction = '';
   let prevDirection = '';
   const [hideHeader, setHideHeader] = useState(false);
+  const [showShadow, setShowShadow] = useState(false);
   const [navBarIsActive, setNavBarIsActive] = useState(false);
 
   const burgerClickHandler = () => {
     setNavBarIsActive((val) => !val);
   };
 
-  const toggleHeader = () => {
-    if (direction === 'down' && curScroll > 60) {
-      setHideHeader(true);
-      prevDirection = direction;
-    } else if (direction === 'up') {
-      setHideHeader(false);
-      prevDirection = direction;
-    }
-  };
   const checkScroll = () => {
+    console.log(window.scrollY);
     curScroll = window.scrollY || document.documentElement.scrollTop;
+    curScroll === 0 ? setShowShadow(false) : setShowShadow(true);
     if (curScroll > prevScroll) {
       direction = 'down';
     } else {
       direction = 'up';
     }
     if (direction !== prevDirection) {
-      toggleHeader();
+      if (direction === 'down' && curScroll > 60) {
+        setHideHeader(true);
+        prevDirection = direction;
+      } else if (direction === 'up') {
+        setHideHeader(false);
+        prevDirection = direction;
+      }
     }
     prevScroll = curScroll;
   };
   window.addEventListener('scroll', checkScroll);
   return (
-    <header className={`${hideHeader ? styles.hide : ''}`}>
+    <header
+      className={`${hideHeader ? styles.hide : ''} ${
+        showShadow ? styles.shadow : ''
+      }`}
+    >
       <nav
         className={`${styles.nav} ${
           navBarIsActive ? styles['nav-bar-active'] : ''

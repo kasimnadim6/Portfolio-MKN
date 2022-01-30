@@ -1,8 +1,7 @@
 @import '../../index.scss';
 header {
   background-color: $bg-color;
-  border-bottom: 1px solid rgba($white-light, 0.1);
-  box-shadow: 1px 1px 1px rgba($black, 0.2);
+  // box-shadow: 0 1rem 3rem -1rem rgba($grey-dark, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -107,4 +106,7 @@ header {
 }
 .hide {
   display: none;
+}
+.shadow {
+  box-shadow: 0 1rem 3rem -1rem rgba($grey-dark, 0.1);
 }
