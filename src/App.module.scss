@@ -1,9 +1,9 @@
-@import './index.scss';
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
 .main {
-  background-color: $bg-color;
+  background-color: var(--bg-color);
   padding: 10rem 18rem;
-  margin-top: 7vh;
-  height: 93vh;
   @include media-breakpoint-down(lg) {
     padding: 10rem 10rem;
   }

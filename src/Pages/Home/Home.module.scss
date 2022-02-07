@@ -1,10 +1,14 @@
-@import '../../index.scss';
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import '../../abstracts/mixin';
 .about-section {
   display: flex;
   flex-direction: column;
+  margin: 8rem 0 15rem 0;
   .what-is-my-name {
-    color: $primary-color;
-    font-size: $md-font-size;
+    color: var(--primary-color);
+    font-size: var(--md-font-size);
     font-weight: 300;
     letter-spacing: 2px;
     font-family: 'Eczar', serif;
@@ -14,16 +18,16 @@
     .name,
     .work-info {
       letter-spacing: 1px;
-      font-size: $lg-font-size;
+      font-size: var(--lg-font-size);
       font-family: 'Eczar', serif;
       font-weight: bold;
     }
     .name {
-      color: $grey-light;
+      color: var(--grey-light);
     }
     .work-info {
       margin-top: 1.2rem;
-      color: $grey-dark;
+      color: var(--grey-dark);
       // @include text-background-clip(to right top, #aa076b, #61045f);
     }
     .web {
@@ -37,7 +41,7 @@
     line-height: 2rem;
     width: 70%;
     letter-spacing: 1px;
-    color: $grey-dark;
+    color: var(--grey-dark);
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
@@ -49,14 +53,14 @@
   .btn {
     width: 20rem;
     padding: 1rem;
-    border: 1px solid $primary-color;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    font-size: $default-font-size;
-    background: $bg-color;
-    color: $primary-color;
+    font-size: var(--default-font-size);
+    background: var(--bg-color);
+    color: var(--primary-color);
     transition: transform 0.3s;
     &:hover {
-      background-color: rgba($primary-color, 0.1);
+      background-color: rgba(var(--primary-color), 0.1);
       transform: translateY(-0.3rem);
     }
     &:active,

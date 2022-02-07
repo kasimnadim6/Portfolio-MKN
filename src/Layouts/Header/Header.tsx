@@ -14,7 +14,6 @@ const Header = () => {
   };
 
   const checkScroll = () => {
-    console.log(window.scrollY);
     curScroll = window.scrollY || document.documentElement.scrollTop;
     curScroll === 0 ? setShowShadow(false) : setShowShadow(true);
     if (curScroll > prevScroll) {
@@ -23,7 +22,7 @@ const Header = () => {
       direction = 'up';
     }
     if (direction !== prevDirection) {
-      if (direction === 'down' && curScroll > 60) {
+      if (direction === 'down' && curScroll > 50) {
         setHideHeader(true);
         prevDirection = direction;
       } else if (direction === 'up') {
@@ -34,6 +33,10 @@ const Header = () => {
     prevScroll = curScroll;
   };
   window.addEventListener('scroll', checkScroll);
+  const navigationHandler = (e: any) => {
+    e.preventDefault();
+    document.getElementById('about')?.scrollIntoView();
+  };
   return (
     <header
       className={`${hideHeader ? styles.hide : ''} ${
@@ -48,7 +51,9 @@ const Header = () => {
         <div className={styles.logo}>KasimNadim</div>
         <ul className={styles['nav-links']}>
           <li>
-            <a href="/">About</a>
+            <a onClick={navigationHandler} href="/about">
+              About
+            </a>
           </li>
           <li>
             <a href="/">Experience</a>
