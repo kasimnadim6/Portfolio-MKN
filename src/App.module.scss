@@ -4,6 +4,8 @@
 .main {
   background-color: var(--bg-color);
   padding: 10rem 18rem;
+  display: flex;
+  flex-direction: column;
   @include media-breakpoint-down(lg) {
     padding: 10rem 10rem;
   }

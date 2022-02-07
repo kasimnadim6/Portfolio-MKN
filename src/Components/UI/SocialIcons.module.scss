@@ -58,12 +58,6 @@
     }
   }
 }
-.social-icons,
-.email {
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-}
 .email {
   position: fixed;
   bottom: 0;
@@ -97,5 +91,11 @@
     height: 9rem;
     margin: 0px auto;
     background-color: var(--grey-dark);
+  }
+}
+.social-icons,
+.email {
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }

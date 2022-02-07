@@ -2,23 +2,27 @@
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
 .about {
+  margin: 8rem 0 15rem 0;
   &-header {
     color: var(--grey-light);
     font-size: 3rem;
     font-weight: 700;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0;
     width: 50%;
     // background-color: violet;
     &:after {
       display: inline-block;
       content: '';
-      // width: 20rem;
       width: 65%;
       height: 1px;
       margin-left: 2rem;
       background-color: var(--grey-dark);
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100%;
     }
   }
   &-body {
@@ -26,7 +30,6 @@
     color: var(--grey-dark);
     display: flex;
     gap: 5rem;
-
     .info {
       width: 50%;
       font-size: 1.6rem;
@@ -34,8 +37,9 @@
       line-height: 2rem;
       letter-spacing: 1px;
       text-align: justify;
-      color: var(--grey-dark) p {
-
+      color: var(--grey-dark);
+      @include media-breakpoint-down(md) {
+        width: 100%;
       }
       .known-technologies {
         .sub-heading {
@@ -101,6 +105,12 @@
       .Tilt:hover ~ .image-border {
         transform: translateX(1.5rem) translateY(2.5rem);
       }
+      @include media-breakpoint-down(md) {
+        margin: auto;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
     }
   }
 }
