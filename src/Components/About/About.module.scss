@@ -74,19 +74,23 @@
     }
     .profile-container {
       position: relative;
-      .profile {
-        max-width: 100%;
-        height: 320px;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        z-index: 100;
+      .Tilt {
         position: relative;
-        transition: transform 0.4s;
+        z-index: 100;
+        .profile {
+          max-width: 100%;
+          height: 320px;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          z-index: 100;
+          position: relative;
+          transition: transform 0.4s;
+        }
       }
       .image-border {
         position: absolute;
-        top: 3rem;
-        left: 3rem;
+        top: 2.5rem;
+        left: 2rem;
         width: 100%;
         height: 320px;
         border: 3px solid var(--primary-color);
@@ -94,11 +98,8 @@
         z-index: 10;
         transition: transform 0.4s;
       }
-      .profile:hover {
-        transform: translateX(0.5rem) translateY(0.5rem);
-        ~ .image-border {
-          transform: translateX(-0.5rem) translateY(-0.5rem);
-        }
+      .Tilt:hover ~ .image-border {
+        transform: translateX(1.5rem) translateY(2.5rem);
       }
     }
   }

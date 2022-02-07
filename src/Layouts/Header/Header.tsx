@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Header.module.scss';
+
 const Header = () => {
   let prevScroll = window.scrollY || document.documentElement.scrollTop;
   let curScroll: number;

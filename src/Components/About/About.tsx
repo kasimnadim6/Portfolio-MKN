@@ -1,5 +1,7 @@
 import styles from './About.module.scss';
 import profile from '../../assets/images/profile.jpg';
+import Tilt from 'react-tilt';
+// const Tilt = require('react-tilt');
 
 const About = () => {
   return (
@@ -40,7 +42,14 @@ const About = () => {
           </div>
         </div>
         <figure className={styles['profile-container']}>
-          <img className={styles.profile} src={profile} alt="profile" />
+          <Tilt
+            // className="Tilt"
+            className={styles.Tilt}
+            options={{ max: 20 }}
+            style={{ height: 250, width: 250 }}
+          >
+            <img className={styles.profile} src={profile} alt="profile" />
+          </Tilt>
           <div className={styles['image-border']}></div>
         </figure>
       </div>
