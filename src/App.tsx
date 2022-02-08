@@ -4,6 +4,7 @@ import Email from './Components/UI/Email';
 import SocialIcons from './Components/UI/SocialIcons';
 import Home from './Pages/Home/Home';
 import About from './Components/About/About';
+import Experience from './Components/Experience/Experience';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main className={styles.main}>
         <Home />
         <About />
+        <Experience />
       </main>
     </>
   );
