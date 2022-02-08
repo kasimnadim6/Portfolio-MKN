@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { BaseSyntheticEvent, useState } from 'react';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -34,9 +34,10 @@ const Header = () => {
     prevScroll = curScroll;
   };
   window.addEventListener('scroll', checkScroll);
-  const navigationHandler = (e: any) => {
+  const navigationHandler = (e: BaseSyntheticEvent) => {
+    const target = e.target.textContent + '';
     e.preventDefault();
-    document.getElementById('about')?.scrollIntoView();
+    document.getElementById(target.toLowerCase())?.scrollIntoView();
   };
   return (
     <header
@@ -57,7 +58,9 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="/">Experience</a>
+            <a href="/Experience" onClick={navigationHandler}>
+              Experience
+            </a>
           </li>
           <li>
             <a href="/">Work</a>
