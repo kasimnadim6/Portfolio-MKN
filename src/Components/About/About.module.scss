@@ -13,7 +13,7 @@
     flex-grow: 2;
     flex-shrink: 2;
     margin: 0;
-    width: 50%;
+    width: 65%;
     &:after {
       flex-grow: 1;
       flex-shrink: 1;
@@ -28,12 +28,13 @@
     }
   }
   &-body {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     color: var(--grey-dark);
     display: flex;
     gap: 5rem;
+    padding: 0 8rem 0 1rem;
     .info {
-      width: 50%;
+      // width: 65%;
       font-size: 1.6rem;
       font-weight: 300;
       line-height: 2rem;
@@ -107,12 +108,13 @@
       .Tilt:hover ~ .image-border {
         transform: translateX(1.5rem) translateY(2.5rem);
       }
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         margin: auto;
       }
     }
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       flex-direction: column;
+      padding: 0;
     }
   }
 }
