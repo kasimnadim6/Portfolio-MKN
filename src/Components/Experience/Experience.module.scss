@@ -49,12 +49,42 @@
     .tab-body {
       padding: 1.4rem 0 0 2rem;
       text-align: justify;
-      p {
-        font-family: inherit;
-        font-size: 1.4rem;
-        font-weight: 300;
-        line-height: 2rem;
-        letter-spacing: 1px;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 2rem;
+      letter-spacing: 1px;
+      .role {
+        font-size: 2.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        .org {
+          color: var(--primary-color);
+        }
+      }
+      .serve-year {
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+      .works {
+        font-size: 1.6rem;
+        p {
+          display: flex;
+          align-items: center;
+          text-align: justify;
+        }
+        p::before {
+          display: inline-block;
+          content: '';
+          margin: 0 1rem;
+          width: 0;
+          height: 0;
+          border-left: 0.7rem solid var(--primary-color);
+          border-top: 0.7rem solid transparent;
+          border-right: 0.7rem solid transparent;
+          border-bottom: 0.7rem solid transparent;
+        }
       }
     }
   }

@@ -13,6 +13,7 @@ interface TabPanelProps {
 }
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
+  console.log(children);
   return (
     <div
       role="tabpanel"
@@ -21,11 +22,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box className={styles['tab-body']}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box className={styles['tab-body']}>{children}</Box>}
     </div>
   );
 }
@@ -39,6 +36,31 @@ function a11yProps(index: number) {
 const Experience = () => {
   const [value, setValue] = useState(0);
   const [orientation, setOrientation] = useState<Orientation>('vertical');
+
+  const experienceRecord = [
+    {
+      organization: 'Cognizant',
+      role: 'Associate',
+      fromWhen: 'Aug-2021',
+      till: 'Present',
+      works: [
+        'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+        `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+      ],
+    },
+    {
+      organization: 'Mindtree Ltd',
+      role: 'Senior Engineer',
+      fromWhen: 'Oct-2018',
+      till: 'Aug-2020',
+      works: [
+        'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+        `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+      ],
+    },
+  ];
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -80,36 +102,26 @@ const Experience = () => {
             {...a11yProps(1)}
           />
         </Tabs>
-        <TabPanel value={value} index={0}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit
-          similique nobis delectus facilis ex minima porro nesciunt repellendus
-          enim placeat dolorem, molestiae accusantium ratione doloribus atque.
-          Neque, officia possimus. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptate sit similique nobis delectus facilis ex
-          minima porro nesciunt repellendus enim placeat dolorem, molestiae
-          accusantium ratione doloribus atque. Neque, officia possimus.Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit
-          similique nobis delectus facilis ex minima porro nesciunt repellendus
-          enim placeat dolorem, molestiae accusantium ratione doloribus atque.
-          Neque, officia possimus.Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptate sit similique nobis delectus facilis ex
-          minima porro nesciunt repellendus enim placeat dolorem, molestiae
-          accusantium ratione doloribus atque. Neque, officia possimus.Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit
-          similique nobis delectus facilis ex minima porro nesciunt repellendus
-          enim placeat dolorem, molestiae accusantium ratione doloribus atque.
-          Neque, officia possimus.Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptate sit similique nobis delectus facilis ex
-          minima porro nesciunt repellendus enim placeat dolorem, molestiae
-          accusantium ratione doloribus atque. Neque, officia possimus.Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit
-          similique nobis delectus facilis ex minima porro nesciunt repellendus
-          enim placeat dolorem, molestiae accusantium ratione doloribus atque.
-          Neque, officia possimus.
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two Description
-        </TabPanel>
+        {experienceRecord.map((exp) => (
+          <TabPanel
+            value={value}
+            index={experienceRecord.indexOf(exp)}
+            key={exp.organization.toLowerCase()}
+          >
+            <h2 className={styles['role']}>
+              {`${exp.role} @ `}
+              <span className={styles['org']}>{exp.organization}</span>
+            </h2>
+            <span
+              className={styles['serve-year']}
+            >{`${exp.fromWhen} to ${exp.till}`}</span>
+            <div className={styles['works']}>
+              {exp.works.map((work) => (
+                <p>{work}</p>
+              ))}
+            </div>
+          </TabPanel>
+        ))}
       </Box>
     </section>
   );
