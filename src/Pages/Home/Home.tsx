@@ -1,6 +1,9 @@
 import styles from './Home.module.scss';
 
 const Home = () => {
+  const sendEmailHandler = () => {
+    window.open('mailto:kasimnadim6@gmail.com');
+  };
   return (
     <section className={styles['about-section']}>
       <span className={styles['what-is-my-name']}>Hi, My name is</span>
@@ -15,7 +18,9 @@ const Home = () => {
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible, human-centered products at Upstatement.
       </div>
-      <button className={styles['contact-me']}>Contact Me</button>
+      <button className={styles['contact-me']} onClick={sendEmailHandler}>
+        Contact Me
+      </button>
     </section>
   );
 };

@@ -66,7 +66,9 @@ const Header = () => {
             <a href="/">Work</a>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a href="/Contact" onClick={navigationHandler}>
+              Contact
+            </a>
           </li>
           <li>
             <a href="/">Resume</a>

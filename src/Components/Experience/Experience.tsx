@@ -1,7 +1,6 @@
 import styles from './Experience.module.scss';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
 import { Orientation } from '@mui/material';
@@ -13,7 +12,6 @@ interface TabPanelProps {
 }
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
-  console.log(children);
   return (
     <div
       role="tabpanel"
@@ -117,7 +115,7 @@ const Experience = () => {
             >{`${exp.fromWhen} to ${exp.till}`}</span>
             <div className={styles['works']}>
               {exp.works.map((work) => (
-                <p>{work}</p>
+                <p key={work}>{work}</p>
               ))}
             </div>
           </TabPanel>
