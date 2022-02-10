@@ -8,7 +8,7 @@
   margin: 8rem 0 15rem 0;
   .what-is-my-name {
     color: var(--primary-color);
-    font-size: var(--md-font-size);
+    font-size: var(--sm-font-size);
     font-weight: 300;
     letter-spacing: 2px;
     font-family: 'Eczar', serif;
@@ -50,22 +50,5 @@
 }
 .contact-me {
   margin-top: 4rem;
-  .btn {
-    width: 20rem;
-    padding: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    font-size: var(--default-font-size);
-    background: var(--bg-color);
-    color: var(--primary-color);
-    transition: transform 0.3s;
-    &:hover {
-      background-color: rgba(var(--primary-color), 0.1);
-      transform: translateY(-0.3rem);
-    }
-    &:active,
-    &:focus {
-      transform: translateY(-0.1rem);
-    }
-  }
+  @include btn(var(--primary-color), var(--bg-color));
 }

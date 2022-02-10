@@ -6,7 +6,7 @@
   color: aliceblue;
   &-header {
     color: var(--grey-light);
-    font-size: 3rem;
+    font-size: var(--md-font-size);
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@
       .tab-header {
         // align-items: flex-start;
         font-family: inherit;
-        font-size: 1.4rem;
+        font-size: var(--sm-font-size);
         font-weight: 400;
         color: var(--primary-color);
         gap: 2rem;
@@ -50,7 +50,7 @@
       padding: 1.4rem 0 0 2rem;
       text-align: justify;
       font-family: inherit;
-      font-size: 1.4rem;
+      font-size: var(--sm-font-size);
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: 1px;
@@ -68,7 +68,7 @@
         font-style: italic;
       }
       .works {
-        font-size: 1.6rem;
+        font-size: var(--default-font-size);
         p {
           display: flex;
           align-items: center;

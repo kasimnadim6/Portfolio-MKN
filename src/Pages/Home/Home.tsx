@@ -15,9 +15,7 @@ const Home = () => {
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible, human-centered products at Upstatement.
       </div>
-      <div className={styles['contact-me']}>
-        <button className={styles.btn}>Contact Me</button>
-      </div>
+      <button className={styles['contact-me']}>Contact Me</button>
     </section>
   );
 };

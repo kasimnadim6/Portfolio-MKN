@@ -1,0 +1,35 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import '../../abstracts/mixin';
+
+.contact {
+  margin: 8rem 0 15rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--white);
+  .what-is-next {
+    color: var(--primary-color);
+    font-size: var(--sm-font-size);
+    letter-spacing: 1px;
+  }
+  .contact-txt {
+    font-size: var(--lg-font-size);
+    font-weight: 700;
+  }
+  .why-contact {
+    font-size: var(--default-font-size);
+    color: var(--grey-dark);
+    width: 75%;
+    text-align: justify;
+    letter-spacing: 1px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .contact-me {
+    @include btn(var(--primary-color), var(--bg-color));
+  }
+}

@@ -5,6 +5,7 @@ import SocialIcons from './Components/UI/SocialIcons';
 import Home from './Pages/Home/Home';
 import About from './Components/About/About';
 import Experience from './Components/Experience/Experience';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Contact />
       </main>
     </>
   );

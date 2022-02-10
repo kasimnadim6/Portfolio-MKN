@@ -13,3 +13,25 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+@mixin btn($color, $bg-color) {
+  width: 20rem;
+  padding: 1rem;
+  border: 1px solid $color;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: var(--default-font-size);
+  font-weight: 600;
+  background: $bg-color;
+  color: $color;
+  cursor: pointer;
+  transition: transform 0.3s;
+  &:hover {
+    background-color: rgba($color, 0.1);
+    transform: translateY(-0.3rem);
+  }
+  &:active,
+  &:focus {
+    transform: translateY(-0.1rem);
+  }
+}
