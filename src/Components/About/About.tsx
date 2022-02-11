@@ -48,14 +48,9 @@ const About = () => {
           </div>
         </div>
         <figure className={styles['profile-container']}>
-          <Tilt
-            className={styles.Tilt}
-            options={{ max: 20 }}
-            style={{ height: 250, width: 250 }}
-          >
+          <Tilt className={styles.Tilt} options={{ max: 20 }}>
             <img className={styles.profile} src={profile} alt="profile" />
           </Tilt>
-          <div className={styles['image-border']}></div>
         </figure>
       </div>
     </section>

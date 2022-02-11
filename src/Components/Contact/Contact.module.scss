@@ -4,9 +4,10 @@
 @import '../../abstracts/mixin';
 
 .contact {
-  margin: 8rem 0 15rem 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   color: var(--white);
@@ -21,12 +22,13 @@
   }
   .why-contact {
     font-size: var(--default-font-size);
-    color: var(--grey-dark);
+    color: var(--grey-light);
     width: 75%;
     letter-spacing: 1px;
     text-align: center;
     @include media-breakpoint-down(md) {
       width: 100%;
+      text-align: justify;
     }
   }
   .contact-me {

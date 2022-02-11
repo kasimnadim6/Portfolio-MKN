@@ -9,7 +9,7 @@ import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
-    <>
+    <div className={styles.container}>
       <Header />
       <SocialIcons />
       <Email />
@@ -19,7 +19,7 @@ function App() {
         <Experience />
         <Contact />
       </main>
-    </>
+    </div>
   );
 }
 

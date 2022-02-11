@@ -15,6 +15,7 @@ const Header = () => {
   };
 
   const checkScroll = () => {
+    alert('scroll');
     curScroll = window.scrollY || document.documentElement.scrollTop;
     curScroll === 0 ? setShowShadow(false) : setShowShadow(true);
     if (curScroll > prevScroll) {

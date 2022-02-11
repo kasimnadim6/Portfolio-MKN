@@ -3,10 +3,6 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 @import '../../abstracts/mixin';
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 8rem 0 15rem 0;
   .what-is-my-name {
     color: var(--primary-color);
     font-size: var(--sm-font-size);
@@ -42,7 +38,7 @@
     line-height: 2rem;
     width: 70%;
     letter-spacing: 1px;
-    color: var(--grey-dark);
+    color: var(--grey-light);
     text-align: justify;
     @include media-breakpoint-down(sm) {
       width: 100%;

@@ -1,11 +1,23 @@
 @import 'bootstrap/scss/_functions';
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
 .main {
   background-color: var(--bg-color);
-  padding: 10rem 18rem;
+  padding: 0 18rem;
   display: flex;
   flex-direction: column;
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+  }
   @include media-breakpoint-down(lg) {
     padding: 10rem 10rem;
   }
@@ -15,4 +27,18 @@
   @include media-breakpoint-down(sm) {
     padding: 5rem 2rem;
   }
+}
+/** Hiding scrollbar **/
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  -webkit-box-shadow: none;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: none;
 }

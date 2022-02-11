@@ -2,8 +2,6 @@
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
 .experience {
-  margin: 8rem 0 15rem 0;
-  color: aliceblue;
   &-header {
     color: var(--grey-light);
     font-size: var(--md-font-size);
@@ -11,13 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-grow: 2;
-    flex-shrink: 2;
     margin: 0;
     width: 65%;
     &:after {
-      flex-grow: 1;
-      flex-shrink: 1;
       display: inline-block;
       content: '';
       height: 1px;
@@ -31,13 +25,11 @@
   &-body {
     margin-top: 2.5rem;
     display: flex;
-    flex-grow: 1;
     padding: 0 8rem 0 1rem;
+    color: var(--grey-light);
     .tab-heading-container {
       min-width: fit-content;
-      // min-width: 13%;
       .tab-header {
-        // align-items: flex-start;
         font-family: inherit;
         font-size: var(--sm-font-size);
         font-weight: 400;
@@ -53,7 +45,7 @@
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: 1px;
-      height: 320px;
+      height: 70vh;
       overflow: auto;
       .role {
         &:not(:last-child) {
