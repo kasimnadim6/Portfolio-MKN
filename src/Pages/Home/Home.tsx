@@ -5,7 +5,7 @@ const Home = () => {
     window.open('mailto:kasimnadim6@gmail.com');
   };
   return (
-    <section className={styles['about-section']}>
+    <section className={styles.home}>
       <span className={styles['what-is-my-name']}>Hey, My name is</span>
       <div className={styles.intro}>
         <h1 className={styles.name}>M. Kasim Nadim.</h1>

@@ -2,9 +2,10 @@
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
 @import '../../abstracts/mixin';
-.about-section {
+.home {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 8rem 0 15rem 0;
   .what-is-my-name {
     color: var(--primary-color);

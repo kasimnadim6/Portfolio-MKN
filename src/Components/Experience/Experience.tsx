@@ -38,24 +38,82 @@ const Experience = () => {
   const experienceRecord = [
     {
       organization: 'Cognizant',
-      role: 'Associate',
-      fromWhen: 'Aug-2021',
-      till: 'Present',
-      works: [
-        'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
-        `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+      roles: [
+        {
+          designation: 'Senior Engineer',
+          fromWhen: 'Aug-2021',
+          till: 'Present',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
         Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
       ],
     },
     {
       organization: 'Mindtree Ltd',
-      role: 'Senior Engineer',
-      fromWhen: 'Oct-2018',
-      till: 'Aug-2020',
-      works: [
-        'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
-        `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+      roles: [
+        {
+          designation: 'Senior Engineer',
+          fromWhen: 'Jan-2021',
+          till: 'Aug-2021',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
         Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
+        {
+          designation: 'Engineer',
+          fromWhen: 'Oct-2018',
+          till: 'Dec-2020',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
+        {
+          designation: 'Engineer',
+          fromWhen: 'Oct-2018',
+          till: 'Dec-2020',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
+        {
+          designation: 'Engineer',
+          fromWhen: 'Oct-2018',
+          till: 'Dec-2020',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
+        {
+          designation: 'Engineer',
+          fromWhen: 'Oct-2018',
+          till: 'Dec-2020',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
+        {
+          designation: 'Engineer',
+          fromWhen: 'Oct-2018',
+          till: 'Dec-2020',
+          works: [
+            'Write modern, performant, maintainable code for a diverse array of client and internal projects.',
+            `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript,
+        Gatsby, React, Craft, WordPress, Prismic, and Netlify`,
+          ],
+        },
       ],
     },
   ];
@@ -106,18 +164,19 @@ const Experience = () => {
             index={experienceRecord.indexOf(exp)}
             key={exp.organization.toLowerCase()}
           >
-            <h2 className={styles['role']}>
-              {`${exp.role} @ `}
-              <span className={styles['org']}>{exp.organization}</span>
-            </h2>
-            <span
-              className={styles['serve-year']}
-            >{`${exp.fromWhen} to ${exp.till}`}</span>
-            <div className={styles['works']}>
-              {exp.works.map((work) => (
-                <p key={work}>{work}</p>
-              ))}
-            </div>
+            {exp.roles.map((role) => (
+              <div className={styles.role}>
+                <h2 className={styles['designation']}>{role.designation}</h2>
+                <span
+                  className={styles['serve-year']}
+                >{`${role.fromWhen} to ${role.till}`}</span>
+                <div className={styles['works']}>
+                  {role.works.map((work) => (
+                    <p key={work}>{work}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </TabPanel>
         ))}
       </Box>
