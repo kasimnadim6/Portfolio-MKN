@@ -23,8 +23,8 @@
     font-size: var(--default-font-size);
     color: var(--grey-dark);
     width: 75%;
-    text-align: justify;
     letter-spacing: 1px;
+    text-align: center;
     @include media-breakpoint-down(md) {
       width: 100%;
     }

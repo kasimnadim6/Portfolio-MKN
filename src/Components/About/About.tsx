@@ -9,22 +9,28 @@ const About = () => {
       <div className={styles['about-body']}>
         <div className={styles['info']}>
           <p>
-            Hello! My name is Mahammad Kasim Nadim and I enjoy creating things
+            Hey! My name is Mahammad Kasim Nadim and I enjoy creating things
             that live on the internet. My interest in web development started
-            back in 2018 when I decided to try editing custom Tumblr themes —
-            turns out hacking together a custom reblog button taught me a lot
-            about HTML & CSS!
+            back in 2016 when I decided to learn HTML, CSS, Javascript from{' '}
+            <a
+              href="https://www.w3schools.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              w3schools.
+            </a>
           </p>
           <p>
-            Fast-forward to today, and I’ve had the privilege of working at an
-            advertising agency, a start-up, a huge corporation, and a
-            student-led design studio. My main focus these days is building
-            accessible, inclusive products and digital experiences at Mindtree
-            for a variety of clients.
+            Fast-forward to today, I'am an Ex Mindtree Mind and currently
+            working for Cognizant. I’ve had the privilege of working in real
+            time project from scratch which gave me a big picture in overall
+            development process.
           </p>
           <p>
-            I also recently launched a course that covers everything you need to
-            build a web app with the Spotify API using Node & React.
+            I don’t like to define myself by the work I’ve done. I define myself
+            by the work I want to do. Skills can be taught, personality is
+            inherent. I prefer to keep learning, continue challenging myself,
+            and do interesting things that matter.
           </p>
           <div className={styles['known-technologies']}>
             <h3 className={styles['sub-heading']}>
@@ -37,6 +43,7 @@ const About = () => {
               <span>Angular</span>
               <span>HTML5</span>
               <span>CSS3</span>
+              <span>Figma</span>
             </div>
           </div>
         </div>

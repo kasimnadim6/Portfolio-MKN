@@ -42,6 +42,7 @@
     width: 70%;
     letter-spacing: 1px;
     color: var(--grey-dark);
+    text-align: justify;
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
