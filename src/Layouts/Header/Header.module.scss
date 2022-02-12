@@ -3,7 +3,7 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 header {
   background-color: var(--bg-color);
-  // box-shadow: 0 1rem 3rem -1rem rgba($grey-dark, 0.1);
+  // box-shadow: 0px 1px 10px 1px red;
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,6 +19,7 @@ header {
       font-size: var(--logo-size);
       color: var(--primary-color);
       font-family: 'Pacifico', cursive;
+      // font-family: 'Eczar', serif;
     }
     .nav-links {
       display: flex;

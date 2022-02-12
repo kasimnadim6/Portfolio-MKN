@@ -15,7 +15,6 @@ const Header = () => {
   };
 
   const checkScroll = () => {
-    alert('scroll');
     curScroll = window.scrollY || document.documentElement.scrollTop;
     curScroll === 0 ? setShowShadow(false) : setShowShadow(true);
     if (curScroll > prevScroll) {
@@ -51,7 +50,7 @@ const Header = () => {
           navBarIsActive ? styles['nav-bar-active'] : ''
         }`}
       >
-        <div className={styles.logo}>KasimNadim</div>
+        <div className={styles.logo}>🄺</div>
         <ul className={styles['nav-links']}>
           <li>
             <a onClick={navigationHandler} href="/about">
