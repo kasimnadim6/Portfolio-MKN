@@ -40,14 +40,14 @@
       }
     }
     .tab-body {
-      padding: 1.4rem 0 0 2rem;
+      padding: 1.6rem;
       text-align: justify;
       font-family: inherit;
       font-size: var(--sm-font-size);
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: 1px;
-      height: 70vh;
+      max-height: 70vh;
       overflow: auto;
       .role {
         &:not(:last-child) {
@@ -101,7 +101,7 @@
     flex-direction: column;
     padding: 0;
     .tab-body {
-      padding: 2rem 0;
+      padding: 2rem 1rem 0 0;
     }
   }
 }

@@ -37,7 +37,14 @@ const Header = () => {
   const navigationHandler = (e: BaseSyntheticEvent) => {
     const target = e.target.textContent + '';
     e.preventDefault();
-    document.getElementById(target.toLowerCase())?.scrollIntoView();
+    setNavBarIsActive(false);
+    document
+      .getElementById(target.toLowerCase())
+      ?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'center',
+      });
   };
   return (
     <header
@@ -51,6 +58,7 @@ const Header = () => {
         }`}
       >
         <div className={styles.logo}>🄺</div>
+        {/* <span className={styles.logo}>K</span> */}
         <ul className={styles['nav-links']}>
           <li>
             <a onClick={navigationHandler} href="/about">

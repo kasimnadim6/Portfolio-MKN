@@ -2,13 +2,12 @@
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
 header {
-  background-color: var(--bg-color);
-  // box-shadow: 0px 1px 10px 1px red;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   transition: transform 0.4s;
+  background: var(--bg-color);
   .nav {
     display: flex;
     align-items: center;
@@ -17,9 +16,20 @@ header {
     min-height: 7vh;
     .logo {
       font-size: var(--logo-size);
-      color: var(--primary-color);
-      font-family: 'Pacifico', cursive;
+      // color: var(--primary-color);
+      background: linear-gradient(
+        90deg,
+        var(--secondary-color-2) 0,
+        var(--secondary-color-1)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      // font-family: inherit;
       // font-family: 'Eczar', serif;
+      // padding: 0px 10px;
+      // border: 2px solid var(--primary-color);
+      // margin-top: 10px;
     }
     .nav-links {
       display: flex;
@@ -59,7 +69,7 @@ header {
         position: absolute;
         right: 0;
         height: 90vh;
-        top: 10vh;
+        top: 7vh;
         background-color: var(--bg-color);
         flex-direction: column;
         align-items: center;
@@ -110,8 +120,8 @@ header {
 }
 .hide {
   // display: none;
-  transform: translateY(-7vh);
+  transform: translateY(-10vh);
 }
 .shadow {
-  box-shadow: 0 1rem 3rem -1rem rgba(var(--grey-dark), 0.1);
+  box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 1);
 }
