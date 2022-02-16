@@ -8,10 +8,10 @@ const Header = () => {
   let prevDirection = '';
   const [hideHeader, setHideHeader] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
-  const [navBarIsActive, setNavBarIsActive] = useState(false);
+  const [mobileNavBarIsActive, setMobileNavBarIsActive] = useState(false);
 
   const burgerClickHandler = () => {
-    setNavBarIsActive((val) => !val);
+    setMobileNavBarIsActive((val) => !val);
   };
 
   const checkScroll = () => {
@@ -34,17 +34,16 @@ const Header = () => {
     prevScroll = curScroll;
   };
   window.addEventListener('scroll', checkScroll);
+
   const navigationHandler = (e: BaseSyntheticEvent) => {
     const target = e.target.textContent + '';
     e.preventDefault();
-    setNavBarIsActive(false);
-    document
-      .getElementById(target.toLowerCase())
-      ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'center',
-      });
+    setMobileNavBarIsActive(false);
+    document.getElementById(target.toLowerCase())?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
   };
   return (
     <header
@@ -54,26 +53,28 @@ const Header = () => {
     >
       <nav
         className={`${styles.nav} ${
-          navBarIsActive ? styles['nav-bar-active'] : ''
+          mobileNavBarIsActive ? styles['mobile-nav-bar'] : ''
         }`}
       >
         <div className={styles.logo}>🄺</div>
         {/* <span className={styles.logo}>K</span> */}
         <ul className={styles['nav-links']}>
-          <li>
+          <li className="about">
             <a onClick={navigationHandler} href="/about">
               About
             </a>
           </li>
-          <li>
+          <li className="experience">
             <a href="/Experience" onClick={navigationHandler}>
               Experience
             </a>
           </li>
-          <li>
-            <a href="/">Work</a>
+          <li className="work">
+            <a href="/work" onClick={navigationHandler}>
+              Work
+            </a>
           </li>
-          <li>
+          <li className="contact">
             <a href="/Contact" onClick={navigationHandler}>
               Contact
             </a>

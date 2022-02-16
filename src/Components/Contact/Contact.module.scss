@@ -6,10 +6,17 @@
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1.6rem;
   color: var(--white);
+  padding: 20vh 0 10vh 0;
+  @include media-breakpoint-down(lg) {
+    padding: 14vh 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 12vh 0;
+  }
   .what-is-next {
     color: var(--primary-color);
     font-size: var(--sm-font-size);

@@ -7,15 +7,15 @@
   padding: 0 18rem;
   display: flex;
   flex-direction: column;
-  section {
-    margin: 20vh 0 10vh 0;
-    @include media-breakpoint-down(lg) {
-      margin: 14vh 0;
-    }
-    @include media-breakpoint-down(sm) {
-      margin: 12vh 0;
-    }
-  }
+  // section {
+  //   margin: 20vh 0 10vh 0;
+  //   @include media-breakpoint-down(lg) {
+  //     margin: 14vh 0;
+  //   }
+  //   @include media-breakpoint-down(sm) {
+  //     margin: 12vh 0;
+  //   }
+  // }
   @include media-breakpoint-down(lg) {
     padding: 10rem 10rem;
   }
@@ -39,4 +39,9 @@
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: none;
+}
+.active {
+  a {
+    color: var(--primary-color) !important;
+  }
 }

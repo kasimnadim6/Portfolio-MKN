@@ -165,7 +165,10 @@ const Experience = () => {
             key={exp.organization.toLowerCase()}
           >
             {exp.roles.map((role) => (
-              <div className={styles.role}>
+              <div
+                className={styles.role}
+                key={`${role.designation}-${role.fromWhen}`}
+              >
                 <h2 className={styles['designation']}>{role.designation}</h2>
                 <span
                   className={styles['serve-year']}

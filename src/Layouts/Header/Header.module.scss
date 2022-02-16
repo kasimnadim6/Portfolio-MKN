@@ -57,9 +57,18 @@ header {
             // @include text-background-clip(to right top, #aa076b, #61045f);
             // border-image: linear-gradient(#aa076b, #61045f) 0 0 1 0;
           }
+          &:active {
+            color: red;
+          }
         }
         &:not(:last-child) {
           margin-right: 1rem;
+        }
+      }
+      .active {
+        background-color: red;
+        a {
+          color: var(--primary-color);
         }
       }
       @include media-breakpoint-down(md) {
@@ -95,7 +104,7 @@ header {
       }
     }
   }
-  .nav-bar-active {
+  .mobile-nav-bar {
     @include media-breakpoint-down(sm) {
       .nav-links {
         transform: translateX(0%);
