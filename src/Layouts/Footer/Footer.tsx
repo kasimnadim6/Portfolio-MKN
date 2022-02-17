@@ -1,7 +1,11 @@
-import style from './Footer.module.scss';
+import styles from './Footer.module.scss';
 
-const Footer = () => {
-  return <div>Footer</div>;
+export const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <span className={styles['build-tag']}>
+        Designed & Built by Mahammad Kasim Nadim
+      </span>
+    </footer>
+  );
 };
-
-export default Footer;

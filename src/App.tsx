@@ -7,6 +7,7 @@ import About from './Components/About/About';
 import Experience from './Components/Experience/Experience';
 import Contact from './Components/Contact/Contact';
 import { useEffect, useRef } from 'react';
+import { Footer } from './Layouts/Footer/Footer';
 
 function App() {
   const sectionRef = useRef<String | null>('');
@@ -45,6 +46,7 @@ function App() {
         <Experience />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }

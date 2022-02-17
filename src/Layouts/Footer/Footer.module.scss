@@ -1,0 +1,14 @@
+.footer {
+  padding: 6rem;
+  background-color: var(--bg-color);
+  display: flex;
+  .build-tag {
+    margin: auto;
+    color: var(--grey-light);
+    font-size: var(--sm-font-size);
+    &:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+  }
+}
