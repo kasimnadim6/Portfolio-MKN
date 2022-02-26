@@ -1,6 +1,5 @@
 import styles from './About.module.scss';
 import profile from '../../assets/images/profile.jpg';
-import Tilt from 'react-tilt';
 
 const About = () => {
   return (
@@ -42,15 +41,15 @@ const About = () => {
               <span>React</span>
               <span>Angular</span>
               <span>HTML5</span>
-              <span>CSS3</span>
+              <span>SASS</span>
               <span>Figma</span>
             </div>
           </div>
         </div>
         <figure className={styles['profile-container']}>
-          <Tilt className={styles.Tilt} options={{ max: 20 }}>
-            <img className={styles.profile} src={profile} alt="profile" />
-          </Tilt>
+          {/* <div className={styles.Tilt}> */}
+          <img className={styles.profile} src={profile} alt="profile" />
+          {/* </div> */}
         </figure>
       </div>
     </section>
