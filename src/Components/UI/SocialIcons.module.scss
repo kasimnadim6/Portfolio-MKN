@@ -1,6 +1,41 @@
 @import 'bootstrap/scss/_functions';
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
+ul {
+  li {
+    list-style: none;
+    padding: 5px;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      color: inherit;
+      position: relative;
+      transition: var(--transition);
+      font-size: 30px;
+      color: var(--grey-dark);
+      transition: transform 0.3s;
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+    }
+    .linkedin:hover {
+      color: var(--linkedin-color);
+    }
+    .whatsapp:hover {
+      color: var(--whatsapp-color);
+    }
+    .github:hover {
+      color: var(--github-color);
+    }
+    .instagram:hover {
+      color: var(--instagram-color);
+    }
+  }
+}
 .social-icons {
   position: fixed;
   bottom: 0;

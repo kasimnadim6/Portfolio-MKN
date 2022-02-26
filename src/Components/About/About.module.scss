@@ -44,6 +44,7 @@
       letter-spacing: 1px;
       text-align: justify;
       color: var(--grey-light);
+      // max-width: 70%;
       a {
         color: var(--primary-color);
         text-decoration: none;
@@ -87,47 +88,135 @@
       }
     }
     .profile-container {
+      min-width: 30rem;
+      width: 30rem;
+      height: 40rem;
+      margin: auto;
       position: relative;
-      width: 250px;
-      height: 320px;
-      .profile {
-        width: 250px;
-        height: 320px;
-        object-fit: cover;
-        border-radius: 0.5rem;
+      .card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
         cursor: pointer;
-        z-index: 100;
-        position: relative;
-        transition: transform 0.4s;
-      }
-      &::before {
-        display: inline-block;
-        content: '';
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-        width: 100%;
-        height: 100%;
-        border: 1px solid var(--primary-color);
-        border-radius: 0.5rem;
-        z-index: 10;
-        transition: transform 0.4s;
-      }
-      &::after {
-        display: inline-block;
-        content: '';
-        position: absolute;
-        top: 2.5rem;
-        left: 2rem;
-        width: 100%;
-        height: 100%;
-        border: 1px solid var(--primary-color);
-        border-radius: 0.5rem;
-        z-index: 10;
-        transition: transform 0.4s;
-      }
-      @include media-breakpoint-down(lg) {
-        margin: auto;
+        transition: 0.5s;
+        .card-image {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background-color: #000;
+          transition: 0.5s;
+          img {
+            width: 30rem;
+            height: 40rem;
+            object-fit: cover;
+          }
+        }
+        .social-icons {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 3;
+          display: flex;
+          margin: 0;
+          padding: 0;
+          li {
+            list-style: none;
+            a {
+              position: relative;
+              display: flex;
+              width: 50px;
+              height: 50px;
+              border-radius: 6px;
+              line-height: 50px;
+              text-align: center;
+              background: #fff;
+              font-size: 32px;
+              color: #333;
+              margin: 0 6px;
+              transition: 0.4s;
+              transform: translateY(200px);
+              opacity: 0;
+              svg {
+                margin: auto;
+                transition: 0.8s;
+                &:hover {
+                  transform: rotateY(360deg);
+                  // backface-visibility: hidden;
+                }
+              }
+            }
+            &:hover {
+              transition: 0.2s;
+              .linkedin {
+                color: var(--linkedin-color);
+              }
+              .whatsapp {
+                color: var(--whatsapp-color);
+              }
+              .github {
+                color: var(--github-color);
+              }
+              .instagram {
+                color: var(--instagram-color);
+              }
+            }
+            &:nth-child(1) a {
+              transition-delay: 0.1s;
+            }
+            &:nth-child(2) a {
+              transition-delay: 0.2s;
+            }
+            &:nth-child(3) a {
+              transition-delay: 0.3s;
+            }
+            &:nth-child(4) a {
+              transition-delay: 0.4s;
+            }
+          }
+        }
+        .details {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: #fff;
+          width: 100%;
+          height: 100px;
+          z-index: 1;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          h2,
+          p {
+            margin: auto;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+        &:hover {
+          .card-image {
+            transform: translateY(-100px);
+            transition: all 0.9s;
+            img {
+              opacity: 0.4;
+              transition: 0.5s;
+            }
+          }
+          .social-icons li a {
+            transform: translateY(0px);
+            opacity: 1;
+          }
+        }
       }
     }
     @include media-breakpoint-down(lg) {

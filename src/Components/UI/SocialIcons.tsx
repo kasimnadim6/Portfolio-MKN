@@ -28,46 +28,44 @@ const SocialIcons = () => {
     }
   };
   return ReactDOM.createPortal(
-    <div className={styles['social-icons']}>
-      <ul>
-        <li>
-          <a
-            href="/"
-            className={styles.linkedin}
-            onClick={(e) => showProfileHandler(e, 'linkedin')}
-          >
-            <LinkedinLogo weight="fill" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="/"
-            className={styles.whatsapp}
-            onClick={(e) => showProfileHandler(e, 'whatsapp')}
-          >
-            <WhatsappLogo weight="fill" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="github.com"
-            className={styles.github}
-            onClick={(e) => showProfileHandler(e, 'github')}
-          >
-            <GithubLogo weight="fill" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="instagram.in"
-            className={styles.instagram}
-            onClick={(e) => showProfileHandler(e, 'instagram')}
-          >
-            <InstagramLogo weight="fill" />
-          </a>
-        </li>
-      </ul>
-    </div>,
+    <ul>
+      <li>
+        <a
+          href="/"
+          className={styles.linkedin}
+          onClick={(e) => showProfileHandler(e, 'linkedin')}
+        >
+          <LinkedinLogo weight="fill" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          className={styles.whatsapp}
+          onClick={(e) => showProfileHandler(e, 'whatsapp')}
+        >
+          <WhatsappLogo weight="fill" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="github.com"
+          className={styles.github}
+          onClick={(e) => showProfileHandler(e, 'github')}
+        >
+          <GithubLogo weight="fill" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="instagram.in"
+          className={styles.instagram}
+          onClick={(e) => showProfileHandler(e, 'instagram')}
+        >
+          <InstagramLogo weight="fill" />
+        </a>
+      </li>
+    </ul>,
     document.getElementById('social-icons') as HTMLElement
   );
 };

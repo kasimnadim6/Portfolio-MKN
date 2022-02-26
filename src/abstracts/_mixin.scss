@@ -17,27 +17,22 @@
 @mixin btn($color, $bg-color) {
   width: 20rem;
   padding: 1rem;
-  // border: 1px solid $color;
   border: none;
   border-radius: 50rem;
   font-size: var(--default-font-size);
   font-weight: 600;
   letter-spacing: 1px;
-  // background: $bg-color;
-  // color: $color;
   cursor: pointer;
   transition: all 0.3s;
   background: linear-gradient(
     90deg,
-    var(--secondary-color-2) 0,
-    var(--secondary-color-1)
+    var(--secondary-color-1) 0,
+    var(--secondary-color-2)
   );
   color: #fff;
   box-shadow: 0 4px 17px 0 var(--secondary-color-1);
   &:hover {
-    // background-color: rgba($color, 0.1);
     transform: translateY(-0.3rem);
-    // background: linear-gradient(90deg, #00bae8 0, #03ce97);
     box-shadow: 0 0 0 0 #53df83;
   }
   &:active,

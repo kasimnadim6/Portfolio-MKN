@@ -1,7 +1,32 @@
 import styles from './About.module.scss';
 import profile from '../../assets/images/profile.jpg';
-
+import SocialIcons from '../UI/SocialIcons';
+import {
+  GithubLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  WhatsappLogo,
+} from 'phosphor-react';
 const About = () => {
+  const showProfileHandler = (e, profile) => {
+    e.preventDefault();
+    switch (profile) {
+      case 'linkedin':
+        window.open('https://linkedin.com/in/iamkasimnadim', '_blank');
+        break;
+      case 'whatsapp':
+        window.open('https://wa.me/8861321329', '_blank');
+        break;
+      case 'github':
+        window.open('https://github.com/kasimnadim6', '_blank');
+        break;
+      case 'instagram':
+        window.open('https://www.instagram.com/kasim_nadim/', '_blank');
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <section id="about" className={styles.about}>
       <h2 className={styles['about-header']}>About Me</h2>
@@ -46,11 +71,55 @@ const About = () => {
             </div>
           </div>
         </div>
-        <figure className={styles['profile-container']}>
-          {/* <div className={styles.Tilt}> */}
-          <img className={styles.profile} src={profile} alt="profile" />
-          {/* </div> */}
-        </figure>
+        <div className={styles['profile-container']}>
+          <div className={styles.card}>
+            <div className={styles['card-image']}>
+              <img src={profile} alt="profile" />
+            </div>
+            <ul className={styles['social-icons']}>
+              <li>
+                <a
+                  href="/"
+                  className={styles.linkedin}
+                  onClick={(e) => showProfileHandler(e, 'linkedin')}
+                >
+                  <LinkedinLogo weight="fill" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className={styles.whatsapp}
+                  onClick={(e) => showProfileHandler(e, 'whatsapp')}
+                >
+                  <WhatsappLogo weight="fill" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="github.com"
+                  className={styles.github}
+                  onClick={(e) => showProfileHandler(e, 'github')}
+                >
+                  <GithubLogo weight="fill" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="instagram.in"
+                  className={styles.instagram}
+                  onClick={(e) => showProfileHandler(e, 'instagram')}
+                >
+                  <InstagramLogo weight="fill" />
+                </a>
+              </li>
+            </ul>
+            <div className={styles['details']}>
+              <h2>Mahammad Kasim Nadim</h2>
+              <p>UI Developer</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
