@@ -11,7 +11,13 @@ const Header = () => {
   const [mobileNavBarIsActive, setMobileNavBarIsActive] = useState(false);
 
   const burgerClickHandler = () => {
-    setMobileNavBarIsActive((val) => !val);
+    const body = document.getElementsByTagName('body')[0];
+    setMobileNavBarIsActive((val) => {
+      val
+        ? (body.style.overflow = 'visible')
+        : (body.style.overflow = 'hidden');
+      return !val;
+    });
   };
 
   const checkScroll = () => {
