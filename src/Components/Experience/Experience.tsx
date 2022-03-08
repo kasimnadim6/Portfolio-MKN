@@ -113,20 +113,17 @@ and project scope.`,
           aria-label="Vertical tabs example"
           sx={{ borderRight: 1, borderColor: 'divider' }}
           TabIndicatorProps={{
-            style: { backgroundColor: '#64ffda' },
+            style: { backgroundColor: '#f7590f' },
           }}
           className={styles['tab-heading-container']}
         >
-          <Tab
-            className={styles['tab-header']}
-            label="Cognizant"
-            {...a11yProps(0)}
-          />
-          <Tab
-            className={styles['tab-header']}
-            label="Mindtree Ltd."
-            {...a11yProps(1)}
-          />
+          {experienceRecord.map((exp) => (
+            <Tab
+              className={styles['tab-header']}
+              label={exp.organization}
+              {...a11yProps(experienceRecord.indexOf(exp))}
+            />
+          ))}
         </Tabs>
         {experienceRecord.map((exp) => (
           <TabPanel

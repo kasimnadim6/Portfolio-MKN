@@ -1,5 +1,6 @@
 import { BaseSyntheticEvent, useState } from 'react';
 import styles from './Header.module.scss';
+import Resume from '../../assets/Resume.pdf';
 
 const Header = () => {
   let prevScroll = window.scrollY || document.documentElement.scrollTop;
@@ -63,7 +64,6 @@ const Header = () => {
         }`}
       >
         <div className={styles.logo}>🄺</div>
-        {/* <span className={styles.logo}>K</span> */}
         <ul className={styles['nav-links']}>
           <li className="about">
             <a onClick={navigationHandler} href="/about">
@@ -85,8 +85,10 @@ const Header = () => {
               Contact
             </a>
           </li>
-          <li>
-            <a href="/">Resume</a>
+          <li className={styles.resume}>
+            <a href={Resume} className="btn" target="_blank" rel="noreferrer">
+              Resume
+            </a>
           </li>
         </ul>
         <div className={styles.burger} onClick={burgerClickHandler}>

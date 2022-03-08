@@ -4,11 +4,8 @@
   display: flex;
   .build-tag {
     margin: auto;
-    color: var(--grey-light);
-    font-size: var(--sm-font-size);
-    &:hover {
-      cursor: pointer;
-      color: var(--primary-color);
-    }
+    color: var(--primary-color);
+    font-size: var(--default-font-size);
+    font-weight: 500;
   }
 }

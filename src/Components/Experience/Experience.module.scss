@@ -10,7 +10,8 @@
     padding: 12vh 0;
   }
   &-header {
-    color: var(--grey-light);
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px var(--secondary-color-1);
     font-size: var(--md-font-size);
     font-weight: 700;
     display: flex;
@@ -25,7 +26,7 @@
       content: '';
       height: 1px;
       margin-left: 2rem;
-      background-color: var(--grey-dark);
+      background-color: var(--primary-color);
     }
     @include media-breakpoint-down(lg) {
       width: 100%;
@@ -35,13 +36,16 @@
     margin-top: 2.5rem;
     display: flex;
     padding: 0 8rem 0 1rem;
-    color: var(--grey-light);
+    color: var(--black);
+    TabPanel {
+      width: 100%;
+    }
     .tab-heading-container {
       min-width: fit-content;
       .tab-header {
         font-family: inherit;
         font-size: var(--sm-font-size);
-        font-weight: 400;
+        font-weight: 800;
         color: var(--primary-color);
         gap: 2rem;
       }
@@ -53,7 +57,6 @@
       font-size: var(--sm-font-size);
       font-weight: 300;
       line-height: 2rem;
-      letter-spacing: 1px;
       max-height: 70vh;
       overflow: auto;
       .role {
@@ -64,6 +67,8 @@
           font-size: 2.3rem;
           font-weight: 600;
           margin-bottom: 1rem;
+          color: var(--black);
+          text-shadow: 0px 0px 1px var(--black);
           .org {
             color: var(--primary-color);
           }
@@ -72,6 +77,8 @@
           display: inline-block;
           margin-bottom: 2rem;
           font-style: italic;
+          color: var(--black);
+          text-shadow: 0px 0px 1px var(--black);
         }
         .works {
           font-size: var(--default-font-size);

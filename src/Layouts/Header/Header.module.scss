@@ -1,13 +1,15 @@
 @import 'bootstrap/scss/_functions';
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
+@import '../../abstracts/mixin';
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   transition: transform 0.4s;
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   .nav {
     display: flex;
     align-items: center;
@@ -16,20 +18,14 @@ header {
     min-height: 7vh;
     .logo {
       font-size: var(--logo-size);
-      // color: var(--primary-color);
       background: linear-gradient(
         90deg,
-        var(--secondary-color-2) 0,
+        var(--primary-color) 0,
         var(--secondary-color-1)
       );
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      // font-family: inherit;
-      // font-family: 'Eczar', serif;
-      // padding: 0px 10px;
-      // border: 2px solid var(--primary-color);
-      // margin-top: 10px;
     }
     .nav-links {
       display: flex;
@@ -37,7 +33,7 @@ header {
       min-width: 40%;
       margin: 0;
       padding: 0;
-      transition: transform 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       li {
         list-style: none;
         a {
@@ -45,20 +41,11 @@ header {
           font-size: var(--default-font-size);
           font-weight: 700;
           padding: 0.5rem 1rem;
-          color: #ccd6f6;
-          border: 3px solid transparent;
+          color: var(--black);
           transition: all 0.2s;
           position: relative;
           &:hover {
             color: var(--primary-color);
-            // background-color: rgba(#3f3e3e, 0.3);
-            // border-radius: 5px;
-            // @include text-background-clip(to right top, #c21500, #ffc500);
-            // @include text-background-clip(to right top, #aa076b, #61045f);
-            // border-image: linear-gradient(#aa076b, #61045f) 0 0 1 0;
-          }
-          &:active {
-            color: red;
           }
         }
         &:not(:last-child) {
@@ -66,9 +53,25 @@ header {
         }
       }
       .active {
-        background-color: red;
         a {
           color: var(--primary-color);
+        }
+      }
+      .resume {
+        width: 18rem;
+        text-align: center;
+        @include button-style;
+        a {
+          outline: none;
+          font-weight: 600;
+          color: var(--white);
+          padding: 1rem;
+          &:hover {
+            color: var(--white);
+          }
+          &:focus {
+            box-shadow: none;
+          }
         }
       }
       @include media-breakpoint-down(md) {
@@ -97,7 +100,7 @@ header {
         width: 3rem;
         height: 1px;
         margin: 8px;
-        background-color: var(--white);
+        background-color: var(--primary-color);
       }
       @include media-breakpoint-down(sm) {
         display: block;
@@ -128,9 +131,10 @@ header {
   }
 }
 .hide {
-  // display: none;
   transform: translateY(-10vh);
 }
 .shadow {
-  box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 1);
+  @include media-breakpoint-up(sm) {
+    box-shadow: 2px 2px 6px rgba($color: #000000, $alpha: 0.1);
+  }
 }

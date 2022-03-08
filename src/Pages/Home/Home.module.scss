@@ -3,7 +3,6 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 @import '../../abstracts/mixin';
 .home {
-  // background: radial-gradient(farthest-side at 50% 45%, #733236, transparent);
   margin: 20vh 0 10vh 0;
   @include media-breakpoint-down(lg) {
     margin: 14vh 0;
@@ -13,10 +12,10 @@
   }
   .what-is-my-name {
     color: var(--primary-color);
+    text-shadow: 0px 0px 1px var(--primary-color);
     font-size: var(--sm-font-size);
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 2px;
-    // font-family: 'Eczar', serif;
   }
   .intro {
     margin-top: 1.5rem;
@@ -28,16 +27,20 @@
       font-weight: bold;
     }
     .name {
-      color: var(--grey-light);
+      color: var(--primary-color);
+      text-shadow: 1px 1px 3px var(--secondary-color-1);
     }
     .work-info {
       margin-top: 1.2rem;
-      color: var(--grey-dark);
+      color: var(--black);
+      text-shadow: 0px 0px 1px var(--black);
       // @include text-background-clip(to right top, #aa076b, #61045f);
     }
     .web {
       font-family: inherit;
-      @include text-background-clip(to right top, #1488cc, #2b32b2);
+      color: var(--primary-color);
+      text-shadow: 1px 1px 3px var(--secondary-color-1);
+      border-radius: 100%;
     }
   }
   .tagline {
@@ -45,16 +48,17 @@
     font-size: 1.6rem;
     line-height: 2rem;
     width: 70%;
-    letter-spacing: 1px;
-    color: var(--grey-light);
+    color: var(--black);
+    font-weight: 500;
     text-align: justify;
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
-    // @include text-background-clip(to right top, #159957, #155799);
   }
 }
 .contact-me {
+  width: 20rem;
+  padding: 1rem;
   margin-top: 4rem;
-  @include btn(var(--primary-color), var(--bg-color));
+  @include button-style;
 }

@@ -11,7 +11,8 @@
     margin: 12vh 0;
   }
   &-header {
-    color: var(--grey-light);
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px var(--secondary-color-1);
     font-size: var(--md-font-size);
     font-weight: 700;
     display: flex;
@@ -26,7 +27,7 @@
       content: '';
       height: 1px;
       margin-left: 2rem;
-      background-color: var(--grey-dark);
+      background-color: var(--primary-color);
     }
     @include media-breakpoint-down(lg) {
       width: 100%;
@@ -43,7 +44,7 @@
       line-height: 2rem;
       letter-spacing: 1px;
       text-align: justify;
-      color: var(--grey-light);
+      color: var(--black);
       // background: radial-gradient(
       //   farthest-side at 50% 50%,
       //   #733236,
@@ -52,6 +53,7 @@
       a {
         color: var(--primary-color);
         text-decoration: none;
+        font-weight: 500;
       }
       @include media-breakpoint-down(md) {
         width: 100%;
@@ -69,7 +71,7 @@
             min-width: 50%;
             margin-bottom: 1rem;
             font-weight: 700;
-            font-size: var(--sm-font-size);
+            font-size: var(--default-font-size);
             display: flex;
             align-items: center;
             transition: all 0.3s;
@@ -97,6 +99,7 @@
       height: 40rem;
       margin: auto;
       position: relative;
+
       .card {
         position: absolute;
         width: 100%;
@@ -202,9 +205,13 @@
           }
           h2 {
             font-size: 2rem;
+            color: var(--primary-color);
+            text-shadow: 0px 0px 1px var(--secondary-color-1);
           }
           p {
             font-size: 1.6rem;
+            color: var(--black);
+            text-shadow: 0px 0px 1px var(--black);
           }
         }
         &:hover {

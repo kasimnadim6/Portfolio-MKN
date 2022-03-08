@@ -19,7 +19,6 @@ function App() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         if (window.scrollY >= sectionTop - sectionHeight) {
-          console.log(section.getAttribute('id'));
           sectionRef.current = section.getAttribute('id');
         }
       });

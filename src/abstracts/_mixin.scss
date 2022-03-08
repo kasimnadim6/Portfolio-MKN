@@ -14,9 +14,7 @@
   color: transparent;
 }
 
-@mixin btn($color, $bg-color) {
-  width: 20rem;
-  padding: 1rem;
+@mixin button-style {
   border: none;
   border-radius: 50rem;
   font-size: var(--default-font-size);
@@ -24,16 +22,26 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s;
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color-1) 0,
-    var(--secondary-color-2)
+  background-image: linear-gradient(
+    to right bottom,
+    #f7590f,
+    #f86117,
+    #f8691e,
+    #f97125,
+    #f9782c,
+    #f97d32,
+    #f98237,
+    #f9873d,
+    #f98b42,
+    #fa9048,
+    #fa944d,
+    #fa9853
   );
-  color: #fff;
-  box-shadow: 0 4px 17px 0 var(--secondary-color-1);
+  color: var(--white);
+  box-shadow: 0 4px 17px 0 var(--primary-color);
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 0 0 0 #53df83;
+    box-shadow: 0 0 0 0 #f7590f;
   }
   &:active,
   &:focus {
