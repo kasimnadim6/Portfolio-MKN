@@ -1,6 +1,6 @@
 import styles from './About.module.scss';
 import profile from '../../assets/images/profile.jpg';
-import SocialIcons from '../UI/SocialIcons';
+
 import {
   GithubLogo,
   InstagramLogo,
