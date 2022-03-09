@@ -17,15 +17,10 @@ header {
     padding: 0 2rem;
     min-height: 7vh;
     .logo {
+      img {
+        height: 6rem;
+      }
       font-size: var(--logo-size);
-      background: linear-gradient(
-        90deg,
-        var(--primary-color) 0,
-        var(--secondary-color-1)
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
     }
     .nav-links {
       display: flex;
@@ -46,6 +41,7 @@ header {
           position: relative;
           &:hover {
             color: var(--primary-color);
+            transform: translateY(-0.3rem);
           }
         }
         &:not(:last-child) {

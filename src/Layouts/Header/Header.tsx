@@ -1,6 +1,7 @@
 import { BaseSyntheticEvent, useState } from 'react';
 import styles from './Header.module.scss';
 import Resume from '../../assets/Resume.pdf';
+import logo from '../../assets/images/k.png';
 
 const Header = () => {
   let prevScroll = window.scrollY || document.documentElement.scrollTop;
@@ -63,7 +64,9 @@ const Header = () => {
           mobileNavBarIsActive ? styles['mobile-nav-bar'] : ''
         }`}
       >
-        <div className={styles.logo}>🄺</div>
+        <div className={styles.logo}>
+          <img src={logo} alt="logo" />
+        </div>
         <ul className={styles['nav-links']}>
           <li className="about">
             <a onClick={navigationHandler} href="/about">
