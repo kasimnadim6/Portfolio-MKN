@@ -120,6 +120,7 @@ and project scope.`,
           {experienceRecord.map((exp) => (
             <Tab
               className={styles['tab-header']}
+              key={exp.organization}
               label={exp.organization}
               {...a11yProps(experienceRecord.indexOf(exp))}
             />

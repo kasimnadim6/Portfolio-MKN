@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 import Resume from '../../assets/Resume.pdf';
 import logo from '../../assets/images/k.png';
@@ -44,9 +44,15 @@ const Header = () => {
   window.addEventListener('scroll', checkScroll);
 
   const navigationHandler = (e: BaseSyntheticEvent) => {
+    const body = document.getElementsByTagName('body')[0];
     const target = e.target.textContent + '';
     e.preventDefault();
-    setMobileNavBarIsActive(false);
+    setMobileNavBarIsActive((val) => {
+      val
+        ? (body.style.overflow = 'visible')
+        : (body.style.overflow = 'hidden');
+      return false;
+    });
     document.getElementById(target.toLowerCase())?.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
