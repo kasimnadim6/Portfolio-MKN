@@ -1,14 +1,5 @@
-@mixin text-background-clip(
-  $where,
-  $primaryColor,
-  $secondaryColor,
-  $opacity: 1
-) {
-  background-image: linear-gradient(
-    $where,
-    rgba($primaryColor, $opacity),
-    rgba($secondaryColor, $opacity)
-  );
+@mixin text-background-clip($property, $value) {
+  #{$property}: $value;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

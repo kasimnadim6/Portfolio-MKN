@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, useEffect, useState } from 'react';
+import { BaseSyntheticEvent, useState } from 'react';
 import styles from './Header.module.scss';
 import Resume from '../../assets/Resume.pdf';
 import logo from '../../assets/images/k.png';

@@ -21,6 +21,11 @@ const Home = () => {
       <button className={styles['contact-me']} onClick={sendEmailHandler}>
         Contact Me
       </button>
+      <div className={styles.bubble}>
+        <div className={styles['bubble-1']}></div>
+        <div className={styles['bubble-2']}></div>
+        <div className={styles['bubble-3']}></div>
+      </div>
     </section>
   );
 };

@@ -1,12 +1,19 @@
 import styles from './About.module.scss';
 import profile from '../../assets/images/profile.jpg';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from 'phosphor-react';
+  faAngular,
+  faFigma,
+  faGithub,
+  faHtml5,
+  faInstagram,
+  faJs,
+  faLinkedin,
+  faReact,
+  faSass,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons';
+
 const About = () => {
   const showProfileHandler = (e, profile) => {
     e.preventDefault();
@@ -61,13 +68,34 @@ const About = () => {
               Here are a few technologies I’ve been working with recently:
             </h3>
             <div className={styles['skills']}>
-              <span>JavaScript</span>
-              <span>TypeScript</span>
-              <span>React</span>
-              <span>Angular</span>
-              <span>HTML5</span>
-              <span>SASS</span>
-              <span>Figma</span>
+              <span className={styles['javascript']}>
+                JavaScript
+                <FontAwesomeIcon icon={faJs} />
+              </span>
+              {/* <span>
+                TypeScript
+                <FontAwesomeIcon icon={faHome} className={styles['javascript']} />
+              </span> */}
+              <span className={styles['react']}>
+                React
+                <FontAwesomeIcon icon={faReact} />
+              </span>
+              <span className={styles['angular']}>
+                Angular
+                <FontAwesomeIcon icon={faAngular} />
+              </span>
+              <span className={styles['html']}>
+                HTML5
+                <FontAwesomeIcon icon={faHtml5} />
+              </span>
+              <span className={styles['sass']}>
+                SASS
+                <FontAwesomeIcon icon={faSass} />
+              </span>
+              <span className={styles['figma']}>
+                Figma
+                <FontAwesomeIcon icon={faFigma} />
+              </span>
             </div>
           </div>
         </div>
@@ -83,7 +111,7 @@ const About = () => {
                   className={styles.linkedin}
                   onClick={(e) => showProfileHandler(e, 'linkedin')}
                 >
-                  <LinkedinLogo weight="fill" />
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </li>
               <li>
@@ -92,7 +120,7 @@ const About = () => {
                   className={styles.whatsapp}
                   onClick={(e) => showProfileHandler(e, 'whatsapp')}
                 >
-                  <WhatsappLogo weight="fill" />
+                  <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
               </li>
               <li>
@@ -101,7 +129,7 @@ const About = () => {
                   className={styles.github}
                   onClick={(e) => showProfileHandler(e, 'github')}
                 >
-                  <GithubLogo weight="fill" />
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
               </li>
               <li>
@@ -110,7 +138,7 @@ const About = () => {
                   className={styles.instagram}
                   onClick={(e) => showProfileHandler(e, 'instagram')}
                 >
-                  <InstagramLogo weight="fill" />
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
             </ul>
