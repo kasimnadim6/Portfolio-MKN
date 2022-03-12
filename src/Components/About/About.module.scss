@@ -77,6 +77,9 @@
             display: flex;
             align-items: center;
             transition: all 0.3s;
+            &:nth-child(even) {
+              padding-left: 2rem;
+            }
             svg {
               font-size: 24px;
               padding: 0.5rem;
@@ -202,6 +205,13 @@
                   // backface-visibility: hidden;
                 }
               }
+              @include media-breakpoint-down(md) {
+                width: 30px;
+                height: 30px;
+                svg {
+                  font-size: 20px;
+                }
+              }
             }
             &:hover {
               transition: 0.2s;
@@ -275,6 +285,9 @@
       }
       &:hover {
         transform: rotate(0deg);
+      }
+      @include media-breakpoint-down(lg) {
+        margin: auto;
       }
     }
     @include media-breakpoint-down(lg) {
