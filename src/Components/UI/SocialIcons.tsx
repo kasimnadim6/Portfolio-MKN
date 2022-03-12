@@ -1,11 +1,12 @@
-import {
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from 'phosphor-react';
 import styles from './SocialIcons.module.scss';
 import ReactDOM from 'react-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLinkedin,
+  faWhatsapp,
+  faGithub,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 const SocialIcons = () => {
   const showProfileHandler = (e, profile) => {
@@ -35,7 +36,7 @@ const SocialIcons = () => {
           className={styles.linkedin}
           onClick={(e) => showProfileHandler(e, 'linkedin')}
         >
-          <LinkedinLogo weight="fill" />
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>
       <li>
@@ -44,7 +45,7 @@ const SocialIcons = () => {
           className={styles.whatsapp}
           onClick={(e) => showProfileHandler(e, 'whatsapp')}
         >
-          <WhatsappLogo weight="fill" />
+          <FontAwesomeIcon icon={faWhatsapp} />
         </a>
       </li>
       <li>
@@ -53,7 +54,7 @@ const SocialIcons = () => {
           className={styles.github}
           onClick={(e) => showProfileHandler(e, 'github')}
         >
-          <GithubLogo weight="fill" />
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </li>
       <li>
@@ -62,7 +63,7 @@ const SocialIcons = () => {
           className={styles.instagram}
           onClick={(e) => showProfileHandler(e, 'instagram')}
         >
-          <InstagramLogo weight="fill" />
+          <FontAwesomeIcon icon={faInstagram} />
         </a>
       </li>
     </ul>,
