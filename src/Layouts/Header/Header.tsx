@@ -47,12 +47,10 @@ const Header = () => {
     const body = document.getElementsByTagName('body')[0];
     const target = e.target.textContent + '';
     e.preventDefault();
-    setMobileNavBarIsActive((val) => {
-      val
-        ? (body.style.overflow = 'visible')
-        : (body.style.overflow = 'hidden');
-      return false;
-    });
+    if (mobileNavBarIsActive) {
+      body.style.overflow = 'visible';
+      setMobileNavBarIsActive(false);
+    }
     document.getElementById(target.toLowerCase())?.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
