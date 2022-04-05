@@ -1,5 +1,5 @@
 import styles from './About.module.scss';
-import profile from '../../assets/images/profile.jpg';
+import profile from '../../assets/images/kasim.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAngular,
